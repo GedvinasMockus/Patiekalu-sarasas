@@ -9,6 +9,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Tymon\JWTAuth\Contracts\JWTSubject;
+
 /**
  * Class User
  * 
@@ -24,8 +31,9 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @package App\Models
  */
-class User extends Model
+class User extends Authenticatable implements JWTSubject
 {
+	use HasApiTokens, HasFactory, Notifiable;
 	protected $table = 'user';
 	public $timestamps = false;
 
@@ -34,7 +42,8 @@ class User extends Model
 	];
 
 	protected $hidden = [
-		'password'
+		'password',
+		'remember_token',
 	];
 
 	protected $fillable = [
@@ -54,4 +63,14 @@ class User extends Model
 	{
 		return $this->hasMany(Restaurant::class, 'owner');
 	}
+
+	public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 }
