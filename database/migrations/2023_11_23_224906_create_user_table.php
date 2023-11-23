@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email', 64);
             $table->string('password', 255);
             $table->integer('role');
-            $table->string('remember_token', 128);
+            $table->string('remember_token', 128)->nullable();
         });
     }
 
