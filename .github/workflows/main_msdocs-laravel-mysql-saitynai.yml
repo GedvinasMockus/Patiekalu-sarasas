@@ -63,4 +63,4 @@ jobs:
           app-name: 'msdocs-laravel-mysql-Saitynai'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_096E51F9C60B46DA8F24B8C2ABE5608E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFD9B30A203641689DAFBEF1FEE9264C }}
