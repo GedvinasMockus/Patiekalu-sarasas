@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id()->unique();
             $table->string('name', 64);
             $table->text('description')->nullable();
-            $table->integer('restaurant', 11);
+            $table->integer('restaurant');
         });
     }
 

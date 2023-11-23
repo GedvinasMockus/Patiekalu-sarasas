@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('surname', 64);
             $table->string('email', 64);
             $table->string('password', 255);
-            $table->integer('role', 11);
+            $table->integer('role');
             $table->string('remember_token', 128);
         });
     }
