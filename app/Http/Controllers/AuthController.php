@@ -65,13 +65,18 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
+        $user = User::where('email', $input['email'])->first();
+        $customClaims = ['role' => $user->role];
+
         if($validator->fails()){
             return $this->sendError($validator->errors(), 'Validation Error', 422);
         }
 
+
+
         try {
             // this authenticates the user details with the database and generates a token
-            if (! $token = JWTAuth::attempt($input)) {
+            if (! $token = JWTAuth::attempt($input, $customClaims)) {
                 return $this->sendError([], "invalid login credentials", 400);
             }
         } catch (JWTException $e) {

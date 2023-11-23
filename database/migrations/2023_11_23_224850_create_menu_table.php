@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('menu', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name', 64);
+            $table->text('description')->nullable();
+            $table->integer('restaurant', 11);
         });
     }
 
