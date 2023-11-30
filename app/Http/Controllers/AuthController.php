@@ -89,9 +89,12 @@ class AuthController extends Controller
 
     public function refresh(Request $request)
     {
-        $token = JWTAuth::getToken();
-        $newToken = JWTAuth::refresh($token);
-
+        try {
+            $token = JWTAuth::getToken();
+            $newToken = JWTAuth::refresh($token);
+        } catch (JWTException $e) {
+            return $this->sendError([], $e->getMessage(), 401);
+        }
         $success = [
             'token' => $newToken,
         ];
