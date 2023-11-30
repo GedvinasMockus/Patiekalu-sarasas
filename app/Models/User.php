@@ -37,10 +37,6 @@ class User extends Authenticatable implements JWTSubject
 	protected $table = 'user';
 	public $timestamps = false;
 
-	protected $casts = [
-		'role' => 'int'
-	];
-
 	protected $hidden = [
 		'password',
 		'remember_token',
@@ -53,11 +49,6 @@ class User extends Authenticatable implements JWTSubject
 		'password',
 		'role'
 	];
-
-	public function user_role()
-	{
-		return $this->belongsTo(UserRole::class, 'role');
-	}
 
 	public function restaurants()
 	{

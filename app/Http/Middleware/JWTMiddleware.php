@@ -21,10 +21,10 @@ class JWTMiddleware
         try {
             $user = JWTAuth::parseToken()->authenticate();
             if (!$user) {
-                return response()->json(['message' => 'user not found'], 500);
+                return response()->json(['message' => 'user not found'], 401);
             }
         } catch (JWTException $e) {
-            return response()->json(['message' => $e->getMessage()], 500);
+            return response()->json(['message' => $e->getMessage()], 401);
         }
         return $next($request);
     }

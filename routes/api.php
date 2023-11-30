@@ -31,6 +31,7 @@ Route::get('/', function() {
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/refresh', [AuthController::class, 'refresh']);
 Route::get('/user', [AuthController::class, 'getUser']);
 
 Route::middleware('jwt.verify')->group(function() {
@@ -39,20 +40,30 @@ Route::middleware('jwt.verify')->group(function() {
     });
     Route::get('/restaurant', [RestaurantController::class, 'index']);
     Route::get('/restaurant/{rid}', [RestaurantController::class, 'show']);
-    Route::post('/restaurant', [RestaurantController::class, 'store']);
-    Route::put('/restaurant/{rid}', [RestaurantController::class, 'update']);
-    Route::delete('/restaurant/{rid}', [RestaurantController::class, 'destroy']);
 
     Route::get('/restaurant/{rid}/menu', [MenuController::class, 'index']);
     Route::get('/restaurant/{rid}/menu/{mid}', [MenuController::class, 'show']);
-    Route::post('/restaurant/{rid}/menu', [MenuController::class, 'store']);
-    Route::put('/restaurant/{rid}/menu/{mid}', [MenuController::class, 'update']);
-    Route::delete('/restaurant/{rid}/menu/{mid}', [MenuController::class, 'destroy']);
 
     Route::get('/restaurant/{rid}/menu/{mid}/dish', [DishController::class, 'index']);
     Route::get('/restaurant/{rid}/menu/{mid}/dish/{did}', [DishController::class, 'show']);
-    Route::post('/restaurant/{rid}/menu/{mid}/dish', [DishController::class, 'store']);
-    Route::put('/restaurant/{rid}/menu/{mid}/dish/{did}', [DishController::class, 'update']);
-    Route::delete('/restaurant/{rid}/menu/{mid}/dish/{did}', [DishController::class, 'destroy']);
+
+    Route::middleware('jwt.privilege')->group(function() {
+        Route::post('/restaurant', [RestaurantController::class, 'store']);
+        Route::put('/restaurant/{rid}', [RestaurantController::class, 'update']);
+        Route::delete('/restaurant/{rid}', [RestaurantController::class, 'destroy']);
+
+        Route::post('/restaurant/{rid}/menu', [MenuController::class, 'store']);
+        Route::put('/restaurant/{rid}/menu/{mid}', [MenuController::class, 'update']);
+        Route::delete('/restaurant/{rid}/menu/{mid}', [MenuController::class, 'destroy']);
+
+        Route::post('/restaurant/{rid}/menu/{mid}/dish', [DishController::class, 'store']);
+        Route::put('/restaurant/{rid}/menu/{mid}/dish/{did}', [DishController::class, 'update']);
+        Route::delete('/restaurant/{rid}/menu/{mid}/dish/{did}', [DishController::class, 'destroy']);
+    });
+
+    Route::middleware('jwt.admin')->group(function() {
+        Route::get('/users', [AuthController::class, 'index']);
+        Route::put('/users/{uid}', [AuthController::class, 'changeRole']);
+    });
 });
 
