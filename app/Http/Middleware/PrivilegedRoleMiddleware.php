@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
-class RoleMiddleware
+class PrivilegedRoleMiddleware
 {
     /**
      * Handle an incoming request.
