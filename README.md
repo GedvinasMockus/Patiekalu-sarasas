@@ -617,3 +617,92 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
         <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas <br> 404 Not Found - Nerastas patiekalas</td>
     </tr>
 </table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Priregistruoti naują vartotoją
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/register}/dish</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre>
+        {
+            "name": "User",
+            "surname": "Duser",
+            "email": "user@email.com",
+            "password": "password",
+            "c_password": "password"
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>201 Created - Vartotojas sukurtas <br> 400 Bad Request - Blogas užklausos formatas</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Prisijungti
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/login</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre> 
+        {
+            "email": "user@email.com",
+            "password": "password"
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas <br> 401 Unauthorized - Klaida kuriant žetoną</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Perkrauti žetoną</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/refresh</td>
+    </tr>
+    <tr>
+        <td>Atsakymo struktūra:</td>
+        <td><pre>
+        {
+            "data": {
+                "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbXNkb2NzLWxhcmF2ZWwtbXlzcWwtc2FpdHluYWkuYXp1cmV3ZWJzaXRlcy5uZXQvYXBpL3JlZnJlc2giLCJpYXQiOjE3MDMxOTg2ODYsImV4cCI6MTcwMzIwMzg3MCwibmJmIjoxNzAzMjAwMjcwLCJqdGkiOiJoRjE0bGdlSUxOTnFGT3owIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJyb2xlIjoiQWRtaW4ifQ.N04Z7jxumDjT1Ce-jStj1B3dCKbTRP-bLZns0BpamAQ"
+            },
+            "message": "successful refresh"
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 401 Unauthorized - Klaida kuriant žeton</td>
+    </tr>
+</table>
