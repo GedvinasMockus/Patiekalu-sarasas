@@ -295,137 +295,158 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>GET</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Gauti meniu sąrašą</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}/menu</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
     </tr>
     <tr>
         <td>Atsako struktūra:</td>
-        <td></td>
+        <td><pre>
+        {   
+            "id": 1,
+            "name": "2023 naujuju metu sventes meniu",
+            "description": "Specialus meniu skirtas tiems, kurie zada lemtinga momenta tarp metu praleisti su mumis.",
+            "restaurant": 1
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 404 Not Found - Nerasta jokių meniu</td>
     </tr>
 </table>
 
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>GET</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Gauti vieną specifinį meniu</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
     </tr>
     <tr>
         <td>Atsako struktūra:</td>
-        <td></td>
+        <td><pre> 
+        {    
+            "id": 1,
+            "name": "2023 naujuju metu sventes meniu",
+            "description": "Specialus meniu skirtas tiems, kurie zada lemtinga momenta tarp metu praleisti su mumis.",
+            "restaurant": 1
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 404 Not Found - Nerastas meniu</td>
     </tr>
 </table>
 
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>POST</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Sukurti naują meniu</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}/menu</td>
     </tr>
     <tr>
-        <td>Atsako struktūra:</td>
-        <td></td>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Užklausos struktūra:</td>
+        <td><pre>
+        {
+            "name": "Naujuju metu meniu",
+            "description": "Specialus meniu vien naujuju metu vakarui"
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas</td>
     </tr>
 </table>
 
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>PUT</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Pakeisti esantį meniu</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}</td>
     </tr>
     <tr>
-        <td>Atsako struktūra:</td>
-        <td></td>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Užklausos struktūra:</td>
+        <td><pre>
+        {
+            "name": "Naujuju metu meniu",
+            "description": "Specialus meniu vien Naujuju Metu vakarui!"
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 404 Not Found - Nerastas meniu</td>
     </tr>
 </table>
 
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>DELETE</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Ištrinti meniu</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}</td>
     </tr>
     <tr>
         <td>Atsako struktūra:</td>
-        <td></td>
+        <td><pre>
+        {
+            "message": "Menu deleted"
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <td>Metodas:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Paskirtis:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Adresas:</td>
-        <td>/api/</td>
-    </tr>
-    <tr>
-        <td>Atsako struktūra:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas <br> 404 Not Found - Nerastas meniu</td>
     </tr>
 </table>
