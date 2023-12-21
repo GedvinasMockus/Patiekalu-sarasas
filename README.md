@@ -60,3 +60,59 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
 |![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/5c7b4575-5a7f-457b-8cc2-7202603fca38)|
 | --- |
 |<p align="center">*Prisijungimo puslapis* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/3086152f-4dd2-4a85-8bf0-e38689d24943)|
+| --- |
+|<p align="center">*Restoranų sąrašo langas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/311dba45-a743-44b4-a08e-340a0c4a0ddc)|
+| --- |
+|<p align="center">*Restorano pridėjimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/be8f9b23-0f4d-40f9-9814-6270933ffded)|
+| --- |
+|<p align="center">*Restorano keitimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/8a1e77b9-e272-40c1-9a56-664c0e7ba778)|
+| --- |
+|<p align="center">*Restorano trinimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/b2997dea-7ac9-4b9c-9a8d-8e0654fa1aeb)|
+| --- |
+|<p align="center">*Meniu sąrašo langas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/1d40a4ae-d5b2-4ea8-8876-7c8746fc72d1)|
+| --- |
+|<p align="center">*Meniu pridėjimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/ed8f139d-fe47-4e12-8ab5-172cc886b65b)|
+| --- |
+|<p align="center">*Meniu keitimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/3db7d572-a5ec-4274-b6ae-90b36d7bffbe)|
+| --- |
+|<p align="center">*Meniu trinimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/0569dd12-a3f7-49f4-9202-4cc77591e738)|
+| --- |
+|<p align="center">*Patiekalų sąrašo langas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/e8571cc1-05a6-4b9d-8f80-2038ad2967cb)|
+| --- |
+|<p align="center">*Patiekalų pridėjimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/b6c8e824-1008-4dd4-ae86-1928a894feb1)|
+| --- |
+|<p align="center">*Patiekalų keitimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/2bc43e50-c22d-4e02-9b14-b76e3cf80469)|
+| --- |
+|<p align="center">*Patiekalų trinimo modalas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/991ce75a-7cf0-4e02-9d68-38543ec0e960)|
+| --- |
+|<p align="center">*Vartotojų sąrašo langas* </p>|
+
+|![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/19d3826e-34e4-4e00-92b5-07d8a07bf4e4)|
+| --- |
+|<p align="center">*Vartotojų keitimo modalas* </p>|
