@@ -1,0 +1,8 @@
+.Vue-Toastification__toast.bottom-center {
+    margin-top: 2rem;
+}
+@media only screen and (max-width: 600px) {
+    .Vue-Toastification__toast.bottom-center {
+        margin-top: 2.5rem;
+    }   
+}
