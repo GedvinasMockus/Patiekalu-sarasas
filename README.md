@@ -632,7 +632,7 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
         <td>/register}/dish</td>
     </tr>
     <tr>
-        <td>Atsako struktūra:</td>
+        <td>Užklausos struktūra:</td>
         <td><pre>
         {
             "name": "User",
@@ -663,7 +663,7 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
         <td>/login</td>
     </tr>
     <tr>
-        <td>Atsako struktūra:</td>
+        <td>Užklausos struktūra:</td>
         <td><pre> 
         {
             "email": "user@email.com",
@@ -691,7 +691,7 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
         <td>/refresh</td>
     </tr>
     <tr>
-        <td>Atsakymo struktūra:</td>
+        <td>Atsako struktūra:</td>
         <td><pre>
         {
             "data": {
