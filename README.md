@@ -235,50 +235,60 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>PUT</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Pakeisti esantį restoraną</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}</td>
     </tr>
     <tr>
         <td>Header:</td>
         <td>Bearer</td>
     </tr>
     <tr>
-        <td>Atsako struktūra:</td>
-        <td></td>
+        <td>Užklausos struktūra:</td>
+        <td><pre>
+        {
+        	"name": "Kavine",
+            "status": "Submitted",
+            "owner": "1"
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 404 Not Found - Nerastas restoranas</td>
     </tr>
 </table>
 
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>DELETE</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Ištrinti restoraną</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant/{restaurant}</td>
     </tr>
     <tr>
         <td>Atsako struktūra:</td>
-        <td></td>
+        <td><pre>
+        {
+            "message": "Restaurant deleted"
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas <br> 404 Not Found - Nerastas restoranas</td>
     </tr>
 </table>
 
