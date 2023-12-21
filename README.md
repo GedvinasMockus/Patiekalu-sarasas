@@ -137,6 +137,10 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
         <td>/api/restaurant</td>
     </tr>
     <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
         <td>Atsako struktūra:</td>
         <td><pre>
         [
@@ -168,11 +172,15 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td>Gauti vieną specifinį</td>
+        <td>Gauti vieną specifinį restoraną</td>
     </tr>
     <tr>
         <td>Adresas:</td>
         <td>/api/restaurant/{restaurant}</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
     </tr>
     <tr>
         <td>Atsako struktūra:</td>
@@ -194,23 +202,33 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
 <table>
     <tr>
         <td>Metodas:</td>
-        <td></td>
+        <td>POST</td>
     </tr>
     <tr>
         <td>Paskirtis:</td>
-        <td></td>
+        <td>Sukurti naują restoraną</td>
     </tr>
     <tr>
         <td>Adresas:</td>
-        <td>/api/</td>
+        <td>/api/restaurant</td>
     </tr>
     <tr>
-        <td>Atsako struktūra:</td>
-        <td></td>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Užklausos struktūra:</td>
+        <td><pre>
+        {
+            "name": "Kavine",
+            "status": "Submitted",
+            "owner": "1"
+        }
+        </pre></td>
     </tr>
     <tr>
         <td>Atsakymo kodai:</td>
-        <td></td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas</td>
     </tr>
 </table>
 
@@ -226,6 +244,10 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
     <tr>
         <td>Adresas:</td>
         <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
     </tr>
     <tr>
         <td>Atsako struktūra:</td>
