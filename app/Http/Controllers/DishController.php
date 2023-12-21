@@ -8,8 +8,19 @@ use Illuminate\Http\Request;
 
 class DishController extends Controller
 {
+    public function sendError($errorData, $message, $status)
+    {
+        $response = [];
+        $response['message'] = $message;
+        if (!empty($errorData)) {
+            $response['data'] = $errorData;
+        }
+
+        return response()->json($response, $status);
+    }
     public function index($rid, $mid) {
-        $dishes = Dish::all()->where('menu', '==', $mid);
+        // $dishes = Dish::all()->where('menu', '==', $mid);
+        $dishes = Dish::where('menu', $mid)->get();
 
         if(!$dishes->isEmpty()){
             return response()->json($dishes);
@@ -22,11 +33,12 @@ class DishController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|min:2|max:64',
             'description' => 'required|string|min:2|max:256',
-            'picture' => 'required|string'
+            'picture' => 'required|string|url'
         ]);
     
         if ($validator->fails())
-            return response()->json(["message" => "Error in the input data"], 400);
+            // return response()->json(["message" => "Error in the input data"], 400);
+            return $this->sendError($validator->errors(), 'Error in the input data', 400);
 
         $dish = new Dish;
         $dish->name = $request->name;
@@ -55,7 +67,8 @@ class DishController extends Controller
         ]);
     
         if ($validator->fails())
-            return response()->json(["message" => "Error in the input data"], 400);
+            // return response()->json(["message" => "Error in the input data"], 400);
+            return $this->sendError($validator->errors(), 'Error in the input data', 400);
 
         if(Dish::where('id', $did)->exists()){
             $dish = Dish::find($did);

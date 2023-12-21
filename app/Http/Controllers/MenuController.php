@@ -8,8 +8,19 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
+    public function sendError($errorData, $message, $status)
+    {
+        $response = [];
+        $response['message'] = $message;
+        if (!empty($errorData)) {
+            $response['data'] = $errorData;
+        }
+
+        return response()->json($response, $status);
+    }
     public function index($rid) {
-        $menus = Menu::all()->where('restaurant', '==', $rid);
+        // $menus = Menu::all()->where('restaurant', '==', $rid); 
+        $menus = Menu::where('restaurant', $rid)->get();
         if(!$menus->isEmpty()){
             return response()->json($menus);
         } else {
@@ -24,7 +35,8 @@ class MenuController extends Controller
         ]);
     
         if ($validator->fails())
-            return response()->json(["message" => "Error in the input data"], 400);
+            // return response()->json(["message" => "Error in the input data"], 400);
+            return $this->sendError($validator->errors(), 'Error in the input data', 400);
 
         $menu = new Menu;
         $menu->name = $request->name;
@@ -51,7 +63,8 @@ class MenuController extends Controller
         ]);
     
         if ($validator->fails())
-            return response()->json(["message" => "Error in the input data"], 400);
+            // return response()->json(["message" => "Error in the input data"], 400);
+            return $this->sendError($validator->errors(), 'Error in the input data', 400);
             
         if(Menu::where('id', $mid)->exists()){
             $menu = Menu::find($mid);

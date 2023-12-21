@@ -32,7 +32,7 @@ Route::get('/', function() {
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/refresh', [AuthController::class, 'refresh']);
-Route::get('/user', [AuthController::class, 'getUser']);
+// Route::get('/user', [AuthController::class, 'getUser']);
 
 Route::middleware('jwt.verify')->group(function() {
     Route::get('/dashboard', function() {

@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
+    public function sendError($errorData, $message, $status)
+    {
+        $response = [];
+        $response['message'] = $message;
+        if (!empty($errorData)) {
+            $response['data'] = $errorData;
+        }
+
+        return response()->json($response, $status);
+    }
     public function index() {
         $restaurants = Restaurant::all();
 
@@ -26,7 +36,8 @@ class RestaurantController extends Controller
         ]);
     
         if ($validator->fails())
-            return response()->json(["message" => "Error in the input data"], 400);
+            // return response()->json(["message" => "Error in the input data"], 400);
+            return $this->sendError($validator->errors(), 'Error in the input data', 400);
 
         $restaurant = new Restaurant;
         $restaurant->name = $request->name;
@@ -54,7 +65,7 @@ class RestaurantController extends Controller
         ]);
     
         if ($validator->fails())
-            return response()->json(["message" => "Error in the input data"], 400);
+            return $this->sendError($validator->errors(), 'Error in the input data', 400);
             
         if(Restaurant::where('id', $rid)->exists()){
             $restaurant = Restaurant::find($rid);
