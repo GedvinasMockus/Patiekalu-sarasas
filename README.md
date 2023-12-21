@@ -450,3 +450,170 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
         <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas <br> 404 Not Found - Nerastas meniu</td>
     </tr>
 </table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Gauti patiekalų sąrašą</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}/dish</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre>
+        {
+            "id": 6,
+            "created_at": null,
+            "updated_at": null,
+            "name": "Patiekalas",
+            "description": "Niam niam",
+            "picture": "https://img.delicious.com.au/G-2mxbOh/w1200/del/2022/08/parmesan-crumbed-chicken-schnitzel-fried-eggs-and-apple-cabbage-slaw-173352-2.jpg",
+            "menu": 2
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 404 Not Found - Nerasta jokių patiekalų</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Gauti vieną specifinį patiekalą</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}/dish/{dish}</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre> 
+        {
+            "id": 6,
+            "created_at": null,
+            "updated_at": null,
+            "name": "Patiekalas",
+            "description": "Niam niam",
+            "picture": "https://img.delicious.com.au/G-2mxbOh/w1200/del/2022/08/parmesan-crumbed-chicken-schnitzel-fried-eggs-and-apple-cabbage-slaw-173352-2.jpg",
+            "menu": 2
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 404 Not Found - Nerastas patiekalas</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>POST</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Sukurti naują patiekalą</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}/dish</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Užklausos struktūra:</td>
+        <td><pre>
+        {
+            "name": "Moliūgas",
+            "description": "Vienas didelis nekeptas moliūgas, ummmmmmmm...",
+            "picture": "https://images.unsplash.com/photo-1634977961336-0a9237b8a064?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHVta2lufGVufDB8fDB8fHww&w=1000&q=80"
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>PUT</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Pakeisti esantį patiekalą</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}/dish/{dish}</td>
+    </tr>
+    <tr>
+        <td>Header:</td>
+        <td>Bearer</td>
+    </tr>
+    <tr>
+        <td>Užklausos struktūra:</td>
+        <td><pre>
+        {
+            "name": "Moliūgas!",
+            "description": "Vienas didelis nekeptas moliūgas, ummmmmmmm...",
+            "picture": "https://images.unsplash.com/photo-1634977961336-0a9237b8a064?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHVta2lufGVufDB8fDB8fHww&w=1000&q=80"
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 404 Not Found - Nerastas patiekalas</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>DELETE</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Ištrinti patiekalą</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant/{restaurant}/menu/{menu}/dish/{dish}</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre>
+        {
+            "message": "Dish deleted"
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 400 Bad Request - Blogas užklausos formatas <br> 404 Not Found - Nerastas patiekalas</td>
+    </tr>
+</table>
