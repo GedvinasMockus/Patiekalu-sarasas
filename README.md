@@ -164,6 +164,174 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
 <table>
     <tr>
         <td>Metodas:</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Gauti vieną specifinį</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant/{restaurant}</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre> 
+        {
+            "id": 1,
+            "name": "Kavine 1",
+            "status": "Active",
+            "owner": 6
+        }
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 404 Not Found - Nerastas restoranas</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
         <td></td>
     </tr>
     <tr>
