@@ -116,3 +116,116 @@ Stai matome pavaizduotą kuriamos sistemos diegimo diagrama:
 |![image](https://github.com/GedvinasMockus/Patiekalu-sarasas/assets/126001610/19d3826e-34e4-4e00-92b5-07d8a07bf4e4)|
 | --- |
 |<p align="center">*Vartotojų keitimo modalas* </p>|
+
+## 4. API specifikacija
+* Užklausos formatas: JSON
+* Atsako formatas: JSON
+* Autorizacija ir autentifikacija: JWT
+
+### 4.1 Restoranų API metodai
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td>GET</td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td>Gauti restoranų sąrašą</td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/restaurant</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td><pre>
+        [
+            {
+                "id": 1,
+                "name": "Kavine 1",
+                "status": "Active",
+                "owner": 6
+            },
+            {
+                "id": 2,
+                "name": "Kavine 2",
+                "status": "Active",
+                "owner": 9
+            }
+        ]
+        </pre></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td>200 OK <br> 404 Not Found - Nerasta jokių restoranų</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Metodas:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Paskirtis:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Adresas:</td>
+        <td>/api/</td>
+    </tr>
+    <tr>
+        <td>Atsako struktūra:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Atsakymo kodai:</td>
+        <td></td>
+    </tr>
+</table>
